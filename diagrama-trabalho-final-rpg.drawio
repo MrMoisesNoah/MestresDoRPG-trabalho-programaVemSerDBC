@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-02T21:00:10.351Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="HbK2jI7HytHN6uyPYKv3" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-02T21:34:56.342Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="iDMOc870b6mPeOOM7Zxg" version="20.4.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -143,16 +143,16 @@
         <mxCell id="aqDDlLiModhRZFDufuGG-2" value="+nome:String&lt;br&gt;+defesa:double&lt;br&gt;+magica: boolean" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="9.5" y="40" width="130.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-5" value="imprimirArmadura(); Striing" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="9.5" y="100" width="130.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-6" value="Armas" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-6" value="Arma" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="160" y="10" width="130.5" height="30" as="geometry" />
         </mxCell>
         <mxCell id="aqDDlLiModhRZFDufuGG-7" value="+nome: String&lt;br&gt;+ataque:double&lt;br&gt;+magica:boolean" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="160" y="40" width="130.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-8" value="imprimirArma(); String" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="160" y="100" width="130.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aqDDlLiModhRZFDufuGG-9" value="Escudo" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -161,7 +161,7 @@
         <mxCell id="aqDDlLiModhRZFDufuGG-10" value="+nome:String&lt;br&gt;+defesa:double&lt;br&gt;+magica: boolean" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="310" y="40" width="130.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-11" value="imprimirEscudo(): &lt;br&gt;String" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="310" y="100" width="130.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aqDDlLiModhRZFDufuGG-16" value="Raca" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -170,7 +170,7 @@
         <mxCell id="aqDDlLiModhRZFDufuGG-17" value="+nome:String&lt;br&gt;+habilidades: boolean&lt;br&gt;&lt;span style=&quot;text-align: left;&quot;&gt;+bonusAtributos: double&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="79.5" y="900" width="130.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-18" value="imprimirRaca(): String" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="79.5" y="960" width="130.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aqDDlLiModhRZFDufuGG-19" value="Classe" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -179,7 +179,7 @@
         <mxCell id="aqDDlLiModhRZFDufuGG-20" value="+nome:String&lt;br&gt;+habilidades: boolean&lt;br&gt;&lt;span style=&quot;text-align: left;&quot;&gt;+bonusAtributos: double&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="235.25" y="900" width="130.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-21" value="imprimirClasse(): String" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="235.25" y="960" width="130.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aqDDlLiModhRZFDufuGG-31" value="Dados" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -191,13 +191,13 @@
         <mxCell id="aqDDlLiModhRZFDufuGG-33" value="+rolarDado(numLados,numQuantidade):int" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="549.34" y="970" width="241.31" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-35" value="Pocoes" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-35" value="Pocao" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="460" y="10" width="130.5" height="30" as="geometry" />
         </mxCell>
         <mxCell id="aqDDlLiModhRZFDufuGG-36" value="+nome: String&lt;br&gt;+tipo: int&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="460" y="40" width="130.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-37" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-37" value="imprimirPocao(): String" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="460" y="100" width="130.5" height="60" as="geometry" />
         </mxCell>
       </root>
