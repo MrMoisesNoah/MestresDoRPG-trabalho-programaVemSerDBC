@@ -1,4 +1,4 @@
-package Jogador;
+package PersonagensJogo;
 
 public class Mestre {
 }
