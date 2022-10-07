@@ -1,4 +1,4 @@
-package Jogador;
+import Jogador.Personagem;
 
 import java.util.List;
 
