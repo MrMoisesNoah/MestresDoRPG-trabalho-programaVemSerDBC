@@ -10,6 +10,8 @@ public class Personagem {
     private int constituicao;
     private int inteligencia;
 
+    private TipoPersoangem tipoPersoangem;
+
     public Personagem(String nome, String raca, String classe, List<Equipamentos> equipamentos, int forca, int defesa, int constituicao, int inteligencia) {
         this.nome = nome;
         this.raca = raca;
@@ -84,4 +86,7 @@ public class Personagem {
     public void setInteligencia(int inteligencia) {
         this.inteligencia = inteligencia;
     }
+
+    public TipoPersoangem getTipoPersoangem() {return tipoPersoangem;}
+    public void setTipoPersoangem(TipoPersoangem tipoPersoangem){ this.tipoPersoangem = tipoPersoangem;}
 }
