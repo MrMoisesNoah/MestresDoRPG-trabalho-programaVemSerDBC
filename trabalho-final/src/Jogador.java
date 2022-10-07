@@ -5,8 +5,15 @@ public class Jogador {
     private String nomeJogador;
     private String idade;
 
+    private  List<Personagem> personagemDoJogador;
+
+    private PersonagemManipulacao personagemManipulacao;
 
 
+
+    public void addPersonagemJogador(){
+
+    }
     @Override
     public String toString() {
         return "Jogador{" +

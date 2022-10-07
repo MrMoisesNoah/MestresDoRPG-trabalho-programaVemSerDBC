@@ -4,8 +4,9 @@ import java.util.List;
 
 public class Mestre {
     private String nomeMestre;
-    private List<Personagem> npc;
-    private List<Personagem> monstros;
+    private List<Personagem> personagemsMestre;
+    private List<Personagem> personagemList;
+    private PersonagemManipulacao personagemManipulacao;
 
 
     public void imprimirMestre(String nomeMestre){
@@ -25,8 +26,8 @@ public class Mestre {
     }
     public Mestre(String nomeMestre, Personagem npc, Personagem monstros) {
         this.nomeMestre = nomeMestre;
-        this.npc.add(npc);
-        this.monstros.add(monstros);
+        //this.npc.add(npc);
+        //this.monstros.add(monstros);
     }
 
     public String getNomeMestre() {
