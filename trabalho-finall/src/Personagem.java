@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Personagem {
     private String nome;
     private String raca;
@@ -7,6 +9,8 @@ public class Personagem {
     private int defesa;
     private int constituicao;
     private int inteligencia;
+
+    private TipoPersoangem tipoPersoangem;
 
     public Personagem(String nome, String raca, String classe, List<Equipamentos> equipamentos, int forca, int defesa, int constituicao, int inteligencia) {
         this.nome = nome;
@@ -82,4 +86,7 @@ public class Personagem {
     public void setInteligencia(int inteligencia) {
         this.inteligencia = inteligencia;
     }
+
+    public TipoPersoangem getTipoPersoangem() {return tipoPersoangem;}
+    public void setTipoPersoangem(TipoPersoangem tipoPersoangem){ this.tipoPersoangem = tipoPersoangem;}
 }
