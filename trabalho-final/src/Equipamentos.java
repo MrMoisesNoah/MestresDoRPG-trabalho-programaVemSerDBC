@@ -1,22 +1,24 @@
 public class Equipamentos {
     private String nomeEquipamento;
-    private double tipo;
+    private TiposItens tipo;
     private double dano;
     private double defesa;
     private double curaVida;
-
     private double restauraMana;
 
+
+
+    //GETS SETTERS CONTRUTORES E TO STRING
     public Equipamentos(){
 
     }
-        public Equipamentos(String nome, double tipo, double dano, double defesa, double curaVida, double restauraMana){
-        this.nomeEquipamento = nome;
-        this.tipo = tipo;
-        this.dano = dano;
-        this.defesa = defesa;
-        this.curaVida = curaVida;
-        this.restauraMana = restauraMana;
+    public Equipamentos(String nome, TiposItens tipo, double dano, double defesa, double curaVida, double restauraMana){
+    this.nomeEquipamento = nome;
+    this.tipo = tipo;
+    this.dano = dano;
+    this.defesa = defesa;
+    this.curaVida = curaVida;
+    this.restauraMana = restauraMana;
 
     }
 
@@ -52,27 +54,27 @@ public class Equipamentos {
         this.curaVida = pocao;
     }
 
-    public double getTipo() {
-        return tipo;
-    }
+    public TiposItens getTipo() {return tipo;}
 
-    public void setTipo(double tipo) {
-        this.tipo = tipo;
-    }
+    public void setTipo(TiposItens tipo) {this.tipo = tipo;}
 
-    public double getCuraVida() {
-        return curaVida;
-    }
+    public double getCuraVida() {return curaVida;}
 
-    public void setCuraVida(double curaVida) {
-        this.curaVida = curaVida;
-    }
+    public void setCuraVida(double curaVida) {this.curaVida = curaVida;}
 
-    public double getRestauraMana() {
-        return restauraMana;
-    }
+    public double getRestauraMana() {return restauraMana;}
 
-    public void setRestauraMana(double restauraMana) {
-        this.restauraMana = restauraMana;
+    public void setRestauraMana(double restauraMana) {this.restauraMana = restauraMana;}
+
+    @Override
+    public String toString() {
+        return "Equipamentos{" +
+                "nomeEquipamento='" + nomeEquipamento + '\'' +
+                ", tipo=" + tipo +
+                ", dano=" + dano +
+                ", defesa=" + defesa +
+                ", curaVida=" + curaVida +
+                ", restauraMana=" + restauraMana +
+                '}';
     }
 }

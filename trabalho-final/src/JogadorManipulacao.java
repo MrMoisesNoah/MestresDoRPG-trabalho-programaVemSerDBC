@@ -20,6 +20,7 @@ public class JogadorManipulacao {
         Jogador procuraJogador = listaJogadores.get(index);
         procuraJogador.setNomeJogador(procuraJogador.getNomeJogador());
         procuraJogador.setIdade(procuraJogador.getIdade());
+
     }
 
     public void listarJogador(){

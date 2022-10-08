@@ -1,25 +1,118 @@
 import java.util.List;
 
 public class Personagem extends PersonagemManipulacao implements AcoesPersonagens{
+
+    //INFORMAÇÕES
+
     private String nome;
     private RacaDoPersonagem raca;
     private ClasseDoPersonagem classe;
-//    private List<Equipamentos> equipamentos;
+
+    //EQUIPAMENTOS
+    private List<Equipamentos> equipamentos;
+
+    //ATRIBUTOS
+
     private double forca;
     private double defesa;
     private double constituicao;
     private double inteligencia;
     private double pontosVida;
+    private double pontosMana;
     private double bonusDano;
     private double bonusDefesa;
 
+    //TIPOS DE PERSONAGEM
     private TipoPersoangem tipoPersoangem;
 
+
+
+    //METODOS DA CLASSE
+    @Override
+    public boolean atacar(Personagem personagem1, Personagem personagem2) {
+         double resultadoDados = Dados.dadosValidarAtaque()+personagem1.getForca();
+         double resuldadoDano = Dados.dadosCalcularDano()+personagem1.getBonusDano();
+         double defesa = personagem2.getDefesa();
+         double pontosVida = personagem1.getPontosVida();
+
+        if (this.classe.equals(ClasseDoPersonagem.ARQUEIRO) && (resultadoDados>=defesa)){
+
+            System.out.println("O Arqueiro " + personagem1.getNome() + " atira uma flecha certeira no " + personagem2.getNome());
+            personagem2.setPontosVida(getPontosVida()- resuldadoDano);
+            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+
+        } else if (this.classe.equals(ClasseDoPersonagem.GUERREIRO)&& (resultadoDados>=defesa)){
+
+            System.out.println("O Guerreiro " + personagem1.getNome() + " acerta um golpe de Espada em " + personagem2.getNome());
+            personagem2.setPontosVida(getPontosVida()- resuldadoDano);
+            //System.out.println("O personagem " + personagem2.getNome() + " perdeu " + personagem2.getPontosVida() + "Pontos de Vida");
+            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+
+        } else if (this.classe.equals(ClasseDoPersonagem.MAGO) && (resultadoDados>=defesa)) {
+            System.out.println("O Mago " + personagem1.getNome() + " lança uma poderosa bola de fogo no " + personagem2.getNome());
+            personagem2.setPontosVida(getPontosVida()- resuldadoDano);
+            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+        } else {
+            System.out.println("Você errou seu Ataque!");
+            return false;
+        }
+        return false;
+    }
+
+    public boolean usarCajado(Personagem personagem1, Personagem personagem2){
+
+        if(personagem1.getClasse().equals(ClasseDoPersonagem.MAGO)){
+            this.atacar(personagem1,personagem2);
+            this.setPontosMana(getPontosMana()-5);
+        }
+
+     return false;
+    }
+
+    @Override
+    public boolean equiparItem(Equipamentos equipamentos) {
+
+        if(equipamentos.getTipo() == TiposItens.ARMADURA){
+            this.setDefesa(this.getDefesa() + equipamentos.getDefesa());
+            System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());
+        }else if(equipamentos.getTipo() == TiposItens.ESPADA && this.getClasse()==ClasseDoPersonagem.GUERREIRO) {
+            this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
+            System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());
+        } else if (equipamentos.getTipo() == TiposItens.ARCO && this.getClasse()==ClasseDoPersonagem.ARQUEIRO){
+            this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
+            System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());
+        }else if (equipamentos.getTipo() == TiposItens.ESCUDO && this.getClasse()!=ClasseDoPersonagem.MAGO) {
+            this.setDefesa(this.getDefesa() + equipamentos.getDefesa());
+            System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());
+        } else if (equipamentos.getTipo() == TiposItens.CAJADO && this.getClasse()==ClasseDoPersonagem.MAGO){
+            this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
+            System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());}
+        else {
+            System.out.println("Seu Personagem não pode Equipar este item.");
+            return false;
+        }
+        return false;
+
+    }
+    public void usarPocao(Equipamentos equipamentos){
+        if(equipamentos.getTipo().equals(TiposItens.POCAO_VIDA)) {
+            this.setPontosVida(this.getPontosVida() + equipamentos.getCuraVida());
+            System.out.println("O personagem " + this.getNome() + " usou poção de cura.");
+            System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
+        } else if (equipamentos.getTipo().equals(TiposItens.POCAO_MANA)) {
+            this.setPontosMana(this.getPontosMana() + equipamentos.getRestauraMana());
+            System.out.println("O personagem " + this.getNome() + " usou poção de cura.");
+            System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
+
+        }
+    }
+
+    // GETS SETTERS CONSTRUTORES E TO STRING
     public Personagem(){
 
     }
     public Personagem(String nome, RacaDoPersonagem raca, ClasseDoPersonagem classe, double forca, double defesa, double constituicao,
-                      double inteligencia, TipoPersoangem tipoPersoangem, double pontosDeVida) {
+                      double inteligencia, TipoPersoangem tipoPersoangem, double pontosDeVida, double pontosMana) {
         this.nome = nome;
         this.raca = raca;
         this.classe = classe;
@@ -30,6 +123,7 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
         this.inteligencia = inteligencia;
         this.tipoPersoangem = tipoPersoangem;
         this.pontosVida = pontosDeVida;
+        this.pontosMana = pontosMana;
 
     }
 
@@ -79,15 +173,24 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
 
     public void setBonusDefesa(double bonusDefesa) {
         this.bonusDefesa = bonusDefesa;
+
     }
 
-    //    public List<Equipamentos> getEquipamentos() {
-//        return equipamentos;
-//    }
-//
-//    public void setEquipamentos(List<Equipamentos> equipamentos) {
-//        this.equipamentos = equipamentos;
-//    }
+    public double getPontosMana() {
+        return pontosMana;
+    }
+
+    public void setPontosMana(double pontosMana) {
+        this.pontosMana = pontosMana;
+    }
+
+        public List<Equipamentos> getEquipamentos() {
+        return equipamentos;
+    }
+
+    public void setEquipamentos(List<Equipamentos> equipamentos) {
+        this.equipamentos = equipamentos;
+    }
 
     public double getForca() {
         return forca;
@@ -137,65 +240,5 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
                 ", TipoPersoangem=" + tipoPersoangem.getDescricao() +
                 ", PontosDeVida=" + pontosVida +
                 '}';
-    }
-
-    @Override
-    public boolean atacar(Personagem personagem1, Personagem personagem2) {
-         double resultadoDados = Dados.dadosValidarAtaque()+personagem1.getForca();
-         double resuldadoDano = Dados.dadosCalcularDano()+personagem1.getBonusDano();
-         double defesa = personagem2.getDefesa();
-         double pontosVida = personagem1.getPontosVida();
-
-        if (this.classe.equals(ClasseDoPersonagem.ARQUEIRO) && (resultadoDados>=defesa)){
-
-            System.out.println("O Arqueiro " + personagem1.getNome() + " atira uma flecha certeira no " + personagem2.getNome());
-            personagem2.setPontosVida(getPontosVida()- resuldadoDano);
-            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
-
-        } else if (this.classe.equals(ClasseDoPersonagem.GUERREIRO)&& (resultadoDados>=defesa)){
-
-            System.out.println("O Guerreiro " + personagem1.getNome() + " acerta um golpe de Espada em " + personagem2.getNome());
-            personagem2.setPontosVida(getPontosVida()- resuldadoDano);
-            //System.out.println("O personagem " + personagem2.getNome() + " perdeu " + personagem2.getPontosVida() + "Pontos de Vida");
-            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
-
-        } else if (this.classe.equals(ClasseDoPersonagem.MAGO) && (resultadoDados>=defesa)) {
-            System.out.println("O Mago " + personagem1.getNome() + " lança uma poderosa bola de fogo no " + personagem2.getNome());
-            personagem2.setPontosVida(getPontosVida()- resuldadoDano);
-            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
-        } else {
-            System.out.println("Você errou seu Ataque!");
-            return false;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean defender(Personagem personagem1, Personagem personagem2) {
-//        double resultadoDados = Dados.dadosValidarAtaque()+ personagem1.getDefesa();
-//        if (){
-//
-//        }
-        return false;
-    }
-
-    @Override
-    public void equiparItem(Equipamentos equipamentos) {
-
-        if(equipamentos.getTipo() == 1) {
-            this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
-        } else if (equipamentos.getTipo() == 2){
-            this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
-        }else if (equipamentos.getTipo() == 3){
-            this.setDefesa(this.getDefesa() + equipamentos.getDefesa());
-        }
-
-    }
-    public void usarPocao(Equipamentos equipamentos){
-
-        this.setPontosVida(this.getPontosVida()+equipamentos.getCuraVida());
-        System.out.println("O personagem " + this.getNome() + " usou poção de cura." );
-        System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
-
     }
 }

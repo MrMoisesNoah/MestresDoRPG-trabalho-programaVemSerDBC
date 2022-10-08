@@ -28,6 +28,7 @@ public class PersonagemManipulacao {
         personagemProcurado.setInteligencia(personagem.getInteligencia());
         personagemProcurado.setTipoPersoangem(personagem.getTipoPersoangem());
         personagemProcurado.setPontosVida(personagem.getPontosVida());
+        personagemProcurado.setPontosMana(personagem.getPontosMana());
     }
 
     public void listarPersonagem() {
