@@ -1,22 +1,25 @@
 import java.util.List;
 
-public class Personagem extends PersonagemManipulacao{
+public class Personagem extends PersonagemManipulacao implements AcoesPersonagens{
     private String nome;
     private RacaDoPersonagem raca;
     private ClasseDoPersonagem classe;
 //    private List<Equipamentos> equipamentos;
-    private int forca;
-    private int defesa;
-    private int constituicao;
-    private int inteligencia;
+    private double forca;
+    private double defesa;
+    private double constituicao;
+    private double inteligencia;
     private double pontosVida;
+    private double bonusDano;
+    private double bonusDefesa;
 
     private TipoPersoangem tipoPersoangem;
 
     public Personagem(){
 
     }
-    public Personagem(String nome, RacaDoPersonagem raca, ClasseDoPersonagem classe, int forca, int defesa, int constituicao, int inteligencia, TipoPersoangem tipoPersoangem, double pontosDeVida) {
+    public Personagem(String nome, RacaDoPersonagem raca, ClasseDoPersonagem classe, double forca, double defesa, double constituicao,
+                      double inteligencia, TipoPersoangem tipoPersoangem, double pontosDeVida) {
         this.nome = nome;
         this.raca = raca;
         this.classe = classe;
@@ -62,6 +65,22 @@ public class Personagem extends PersonagemManipulacao{
         this.pontosVida = pontosVida;
     }
 
+    public double getBonusDano() {
+        return bonusDano;
+    }
+
+    public void setBonusDano(double bonusDano) {
+        this.bonusDano = bonusDano;
+    }
+
+    public double getBonusDefesa() {
+        return bonusDefesa;
+    }
+
+    public void setBonusDefesa(double bonusDefesa) {
+        this.bonusDefesa = bonusDefesa;
+    }
+
     //    public List<Equipamentos> getEquipamentos() {
 //        return equipamentos;
 //    }
@@ -70,35 +89,35 @@ public class Personagem extends PersonagemManipulacao{
 //        this.equipamentos = equipamentos;
 //    }
 
-    public int getForca() {
+    public double getForca() {
         return forca;
     }
 
-    public void setForca(int forca) {
+    public void setForca(double forca) {
         this.forca = forca;
     }
 
-    public int getDefesa() {
+    public double getDefesa() {
         return defesa;
     }
 
-    public void setDefesa(int defesa) {
+    public void setDefesa(double defesa) {
         this.defesa = defesa;
     }
 
-    public int getConstituicao() {
+    public double getConstituicao() {
         return constituicao;
     }
 
-    public void setConstituicao(int constituicao) {
+    public void setConstituicao(double constituicao) {
         this.constituicao = constituicao;
     }
 
-    public int getInteligencia() {
+    public double getInteligencia() {
         return inteligencia;
     }
 
-    public void setInteligencia(int inteligencia) {
+    public void setInteligencia(double inteligencia) {
         this.inteligencia = inteligencia;
     }
 
@@ -123,7 +142,7 @@ public class Personagem extends PersonagemManipulacao{
     @Override
     public boolean atacar(Personagem personagem1, Personagem personagem2) {
          double resultadoDados = Dados.dadosValidarAtaque()+personagem1.getForca();
-         double resuldadoDano = Dados.dadosCalcularDano();
+         double resuldadoDano = Dados.dadosCalcularDano()+personagem1.getBonusDano();
          double defesa = personagem2.getDefesa();
          double pontosVida = personagem1.getPontosVida();
 
@@ -144,6 +163,9 @@ public class Personagem extends PersonagemManipulacao{
             System.out.println("O Mago " + personagem1.getNome() + " lança uma poderosa bola de fogo no " + personagem2.getNome());
             personagem2.setPontosVida(getPontosVida()- resuldadoDano);
             System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+        } else {
+            System.out.println("Você errou seu Ataque!");
+            return false;
         }
         return false;
     }
@@ -158,7 +180,22 @@ public class Personagem extends PersonagemManipulacao{
     }
 
     @Override
-    public boolean equiparItem(Equipamentos equipamentos) {
-        return false;
+    public void equiparItem(Equipamentos equipamentos) {
+
+        if(equipamentos.getTipo() == 1) {
+            this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
+        } else if (equipamentos.getTipo() == 2){
+            this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
+        }else if (equipamentos.getTipo() == 3){
+            this.setDefesa(this.getDefesa() + equipamentos.getDefesa());
+        }
+
+    }
+    public void usarPocao(Equipamentos equipamentos){
+
+        this.setPontosVida(this.getPontosVida()+equipamentos.getCuraVida());
+        System.out.println("O personagem " + this.getNome() + " usou poção de cura." );
+        System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
+
     }
 }

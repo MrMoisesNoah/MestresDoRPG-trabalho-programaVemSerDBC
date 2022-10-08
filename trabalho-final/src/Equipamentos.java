@@ -1,17 +1,22 @@
 public class Equipamentos {
     private String nomeEquipamento;
+    private double tipo;
     private double dano;
     private double defesa;
-    private double pocao;
+    private double curaVida;
+
+    private double restauraMana;
 
     public Equipamentos(){
 
     }
-        public Equipamentos(String nome, double dano, double defesa, double pocao){
+        public Equipamentos(String nome, double tipo, double dano, double defesa, double curaVida, double restauraMana){
         this.nomeEquipamento = nome;
+        this.tipo = tipo;
         this.dano = dano;
         this.defesa = defesa;
-        this.pocao = pocao;
+        this.curaVida = curaVida;
+        this.restauraMana = restauraMana;
 
     }
 
@@ -40,10 +45,34 @@ public class Equipamentos {
     }
 
     public double getPocao() {
-        return pocao;
+        return curaVida;
     }
 
     public void setPocao(double pocao) {
-        this.pocao = pocao;
+        this.curaVida = pocao;
+    }
+
+    public double getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(double tipo) {
+        this.tipo = tipo;
+    }
+
+    public double getCuraVida() {
+        return curaVida;
+    }
+
+    public void setCuraVida(double curaVida) {
+        this.curaVida = curaVida;
+    }
+
+    public double getRestauraMana() {
+        return restauraMana;
+    }
+
+    public void setRestauraMana(double restauraMana) {
+        this.restauraMana = restauraMana;
     }
 }

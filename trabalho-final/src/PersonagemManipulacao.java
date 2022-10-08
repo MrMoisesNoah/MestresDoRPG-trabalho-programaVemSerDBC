@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class PersonagemManipulacao implements AcoesPersonagens {
+public class PersonagemManipulacao {
     private List<Personagem> listaDePersonagens;
 
     public PersonagemManipulacao() {
@@ -34,20 +34,5 @@ public abstract class PersonagemManipulacao implements AcoesPersonagens {
         for (int i = 0; i < listaDePersonagens.size(); i++) {
             System.out.println("id=" + i + " | " + listaDePersonagens.get(i));
         }
-    }
-
-    @Override
-    public boolean atacar( Personagem personagem1, Personagem personagem2) {
-        return false;
-    }
-
-    @Override
-    public boolean defender(Personagem personagem1, Personagem personagem2) {
-        return false;
-    }
-
-    @Override
-    public boolean equiparItem(Equipamentos equipamento) {
-        return false;
     }
 }

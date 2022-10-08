@@ -4,7 +4,7 @@
 
         boolean defender(Personagem personagem1, Personagem personagem2);
 
-        boolean equiparItem(Equipamentos equipamento);
+        void equiparItem(Equipamentos equipamento);
 
 
     }

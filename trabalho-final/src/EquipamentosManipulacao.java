@@ -23,7 +23,9 @@ public class EquipamentosManipulacao {
         procuraEquipamentos.setNomeEquipamento(equipamentos.getNomeEquipamento());
         procuraEquipamentos.setDano(equipamentos.getDano());
         procuraEquipamentos.setDefesa(equipamentos.getDefesa());
-        procuraEquipamentos.setPocao(equipamentos.getPocao());
+        procuraEquipamentos.setCuraVida(equipamentos.getCuraVida());
+        procuraEquipamentos.setRestauraMana(equipamentos.getRestauraMana());
+        procuraEquipamentos.setTipo(equipamentos.getTipo());
 
     }
 
