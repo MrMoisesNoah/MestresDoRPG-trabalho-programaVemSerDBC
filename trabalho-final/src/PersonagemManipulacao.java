@@ -1,7 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class PersonagemManipulacao {
+    public List<Personagem> getListaDePersonagens() {
+        return listaDePersonagens;
+    }
+
     private List<Personagem> listaDePersonagens;
 
     public PersonagemManipulacao() {
@@ -32,6 +37,19 @@ public class PersonagemManipulacao {
     public void listarPersonagem() {
         for (int i = 0; i < listaDePersonagens.size(); i++) {
             System.out.println("id=" + i + " | " + listaDePersonagens.get(i));
+        }
+    }
+
+
+    public boolean verificarMonstrosVivos() {
+        Optional<Personagem> listaMonstrosVivos = listaDePersonagens.stream()
+                .filter(monstro -> monstro.getPontosVida() > 0)
+                .findAny();
+        if (listaMonstrosVivos.isPresent()) {
+            System.out.println("TRUE");
+            return true;
+        } else {
+            return false;
         }
     }
 

@@ -1,7 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class JogadorManipulacao {
+    public List<Jogador> getListaJogadores() {
+        return listaJogadores;
+    }
+
     private List<Jogador> listaJogadores;
 
 
@@ -25,7 +30,8 @@ public class JogadorManipulacao {
 
     public void listarJogador(){
         for(int i =0; i<listaJogadores.size(); i++){
-            System.out.println("Id Jogador = "+i+"|"+"JOGADOR = " + listaJogadores.get(i));
+            System.out.println("Id Jogador = "+i+"|"+ listaJogadores.get(i));
         }
     }
+
 }
