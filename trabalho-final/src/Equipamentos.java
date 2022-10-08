@@ -22,6 +22,7 @@ public class Equipamentos {
 
     }
 
+
     public String getNomeEquipamento() {
         return nomeEquipamento;
     }
