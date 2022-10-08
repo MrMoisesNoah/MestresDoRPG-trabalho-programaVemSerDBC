@@ -2,9 +2,15 @@ import java.util.Scanner;
 
 public class teste {
     public static void main(String[] args) {
-        Cenario cena1 = new Cenario();
+        Cenario oi = new Cenario();
 
-        cena1.inicarJogo();
+
+
+        oi.criarPersonagens();
+
+
+
+
 
 
 
@@ -15,6 +21,9 @@ public class teste {
 //        Equipamentos escudo = new Equipamentos("Escudo",TiposItens.ESCUDO,0,5,0,0);
 //        Equipamentos pocao =  new Equipamentos("Pocao",TiposItens.POCAO_VIDA,0,0,10,0);
 //        Equipamentos pocaoMana = new Equipamentos("PocaoMana",TiposItens.POCAO_MANA,0,0,0,10);
+
+
+
 //        rawad.adicionarPersonagem(rawad);
 //        orcfeio.adicionarPersonagem(orcfeio);
 //
@@ -26,7 +35,7 @@ public class teste {
 //        rawad.atacar(rawad,orcfeio);
 //        rawad.atacar(rawad,orcfeio);
 //        rawad.atacar(rawad,orcfeio);
-
+//
 //        System.out.println(rawad.getBonusDano());
 //
 //        rawad.usarCajado(rawad, orcfeio);

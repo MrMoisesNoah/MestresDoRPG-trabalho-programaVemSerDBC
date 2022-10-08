@@ -31,7 +31,7 @@ public class EquipamentosManipulacao {
 
     public void listarEquipamentos(){
         for(int i = 0; i<listaEquipamentos.size(); i++){
-            System.out.println("Id Itens = " + i +"|"+ "Equipamento: " + listaEquipamentos.get(i));
+            System.out.println("Id Itens = " + i +"|" + listaEquipamentos.get(i));
         }
     }
 }

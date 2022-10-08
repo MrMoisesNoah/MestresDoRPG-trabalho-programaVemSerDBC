@@ -116,7 +116,6 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
     }
 
 
-
     // GETS SETTERS CONSTRUTORES E TO STRING
     public Personagem(){
 
