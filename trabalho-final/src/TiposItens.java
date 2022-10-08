@@ -6,7 +6,6 @@ public enum TiposItens {
     ESCUDO(),
     POCAO_VIDA(),
     POCAO_MANA(),
-
     CAJADO();
 
 

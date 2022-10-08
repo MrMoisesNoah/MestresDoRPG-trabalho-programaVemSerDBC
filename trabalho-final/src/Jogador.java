@@ -4,11 +4,7 @@ public class Jogador {
 
     private String nomeJogador;
     private int idade;
-
-    private  List<Personagem> personagemDoJogador;
-
-
-
+    private  Personagem personagemDoJogador;
 
 
     public void imprimirJogador(){
@@ -21,10 +17,10 @@ public class Jogador {
     public Jogador(){
 
     }
-    public Jogador(String nome, int idade, List<Personagem> personagemDoJogador){
+    public Jogador(String nome, int idade, Personagem personagemDoJogador){
         this.nomeJogador = nome;
         this.idade = idade;
-        this.personagemDoJogador = personagemDoJogador.stream().toList();
+        this.personagemDoJogador = personagemDoJogador;
     }
 
     public String getNomeJogador() {
@@ -42,14 +38,19 @@ public class Jogador {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public Personagem getPersonagemDoJogador() {return personagemDoJogador;}
+
+    public void setPersonagemDoJogador(Personagem personagemDoJogador) {this.personagemDoJogador = personagemDoJogador;}
+
     @Override
     public String toString() {
         return "Jogador{" +
                 "nomeJogador='" + nomeJogador + '\'' +
-                ", idade='" + idade + '\'' +
+                ", idade=" + idade +
+                ", personagemDoJogador=" + personagemDoJogador +
                 '}';
     }
-
 
 
 }

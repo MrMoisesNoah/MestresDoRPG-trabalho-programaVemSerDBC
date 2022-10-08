@@ -12,8 +12,8 @@ public class PersonagemManipulacao {
         this.listaDePersonagens.add(personagem);
     }
 
-    public void removerPersonagemPorIndice(Integer index) {
-        this.listaDePersonagens.remove(index.intValue());
+    public void removerPersonagemPorIndice(Personagem personagem) {
+        this.listaDePersonagens.remove(personagem);
     }
 
     public void editarPersonagem(Integer index, Personagem personagem) {
