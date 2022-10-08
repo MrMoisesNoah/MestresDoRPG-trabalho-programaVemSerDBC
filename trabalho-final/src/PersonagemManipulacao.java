@@ -21,10 +21,8 @@ public class PersonagemManipulacao {
         personagemProcurado.setNome(personagem.getNome());
         personagemProcurado.setRaca(personagem.getRaca());
         personagemProcurado.setClasse(personagem.getClasse());
-//        personagemProcurado.setEquipamentos(personagem.getEquipamentos());
         personagemProcurado.setForca(personagem.getForca());
         personagemProcurado.setDefesa(personagem.getDefesa());
-        personagemProcurado.setConstituicao(personagem.getConstituicao());
         personagemProcurado.setInteligencia(personagem.getInteligencia());
         personagemProcurado.setTipoPersoangem(personagem.getTipoPersoangem());
         personagemProcurado.setPontosVida(personagem.getPontosVida());
@@ -36,4 +34,5 @@ public class PersonagemManipulacao {
             System.out.println("id=" + i + " | " + listaDePersonagens.get(i));
         }
     }
+
 }
