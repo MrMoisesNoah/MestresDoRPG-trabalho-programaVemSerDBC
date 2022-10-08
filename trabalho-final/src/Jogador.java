@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Jogador {
+public class Jogador extends Personagem{
 
     private String nomeJogador;
     private int idade;
@@ -51,6 +51,7 @@ public class Jogador {
                 ", personagemDoJogador=" + personagemDoJogador +
                 '}';
     }
+
 
 
 }
