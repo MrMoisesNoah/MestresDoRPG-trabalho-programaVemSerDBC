@@ -1,13 +1,11 @@
 import java.util.Optional;
 import java.util.Scanner;
 
-    public class Cenario extends Jogador {
+     public class Cenario  {
 
         private String nomeMestre;
         private int idadeMestre;
-
         private String nomeJogador;
-
         private int idadeJogador;
         private Mestre mestre = new Mestre();
         private String nome;
@@ -21,13 +19,53 @@ import java.util.Scanner;
         private double pontosMana;
 
 
-        PersonagemManipulacao listaMonstro = new PersonagemManipulacao();
+        private PersonagemManipulacao personagemManipulacao = new PersonagemManipulacao();
 
-        JogadorManipulacao listaJogadres = new JogadorManipulacao();
+        private JogadorManipulacao jogadorManipulacao = new JogadorManipulacao();
 
-        EquipamentosManipulacao listaEquipamentos = new EquipamentosManipulacao();
+        private EquipamentosManipulacao listaEquipamentos = new EquipamentosManipulacao();
 
-        Scanner menu = new Scanner(System.in);
+         public String getNomeMestre() {
+             return nomeMestre;
+         }
+
+         public void setNomeMestre(String nomeMestre) {
+             this.nomeMestre = nomeMestre;
+         }
+
+         public PersonagemManipulacao getPersonagemManipulacao() {
+             return personagemManipulacao;
+         }
+
+         public void setPersonagemManipulacao(PersonagemManipulacao personagemManipulacao) {
+             this.personagemManipulacao = personagemManipulacao;
+         }
+
+         public JogadorManipulacao getJogadorManipulacao() {
+             return jogadorManipulacao;
+         }
+
+         public void setJogadorManipulacao(JogadorManipulacao jogadorManipulacao) {
+             this.jogadorManipulacao = jogadorManipulacao;
+         }
+
+         public EquipamentosManipulacao getListaEquipamentos() {
+             return listaEquipamentos;
+         }
+
+         public void setListaEquipamentos(EquipamentosManipulacao listaEquipamentos) {
+             this.listaEquipamentos = listaEquipamentos;
+         }
+
+         private Scanner menu = new Scanner(System.in);
+
+         public Personagem getPersonagemJogador(int index){
+             return jogadorManipulacao.getJogador(index).getPersonagemDoJogador();
+         }
+
+         public Personagem getMonstro(int index) {
+             return personagemManipulacao.getPersonagem(index);
+         }
 
         public void inicarJogo() {
             System.out.println("Bem vindo aventureiro");
@@ -74,7 +112,7 @@ import java.util.Scanner;
 
                     case 1 -> {
                         TipoPersoangem tipoPersonagem = TipoPersoangem.MONSTRO;
-                        listaMonstro.adicionarPersonagem(new Personagem(nome, RacaDoPersonagem.valueOf(raca), ClasseDoPersonagem.valueOf(classe), forca, defesa, constituicao, inteligencia, tipoPersonagem, pontosVida, pontosMana));
+                        personagemManipulacao.adicionarPersonagem(new Personagem(nome, RacaDoPersonagem.valueOf(raca), ClasseDoPersonagem.valueOf(classe), forca, defesa, constituicao, inteligencia, tipoPersonagem, pontosVida, pontosMana));
                     }
 
                     case 2 -> {
@@ -85,7 +123,7 @@ import java.util.Scanner;
                         idadeJogador = menu.nextInt();
                         TipoPersoangem tipoPersonagem = TipoPersoangem.PERSONAGEM_DO_JOGADOR;
                         Personagem personagemJogador = new Personagem(nome, RacaDoPersonagem.valueOf(raca), ClasseDoPersonagem.valueOf(classe), forca, defesa, constituicao, inteligencia, tipoPersonagem, pontosVida, pontosMana);
-                        listaJogadres.adicionarJogador(new Jogador(nomeJogador, idadeJogador, personagemJogador));
+                        jogadorManipulacao.adicionarJogador(new Jogador(nomeJogador, idadeJogador, personagemJogador));
                     }
                 }
 
@@ -177,15 +215,15 @@ import java.util.Scanner;
         }
 
 
-        public void iniciarBatalha(Personagem jogador, Personagem monstro) {
+        public void iniciarBatalha(Jogador jogador, Personagem monstro) {
             int i = 0;
-            while (monstro.verificarMonstrosVivos() && jogador.getPontosVida() > 0) {
+            while (monstro.getPontosVida() > 0 && jogador.getPersonagemDoJogador().getPontosVida() > 0) {
                 System.out.println("Turno :" + ++i);
-                jogador.atacar(getPersonagemDoJogador(), monstro);
+                jogador.getPersonagemDoJogador().atacar(jogador.getPersonagemDoJogador(), monstro);
                 System.out.println("Turno :" + ++i);
-                monstro.atacar(monstro, getPersonagemDoJogador());
+                monstro.atacar(monstro, jogador.getPersonagemDoJogador());
             }
-            if(jogador.getPontosVida() <= 0) {
+            if(jogador.getPersonagemDoJogador().getPontosVida() <= 0) {
                 System.out.println("Venceu: " + monstro);
             } else if (monstro.getPontosVida() <= 0) {
                 System.out.println("Venceu: " + jogador);
