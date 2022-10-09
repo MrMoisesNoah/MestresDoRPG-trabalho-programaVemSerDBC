@@ -13,7 +13,10 @@ public class EquipamentosManipulacao {
         this.listaEquipamentos.add(equipamentos);
     }
 
-    public void removerEquipamentos(Integer index){this.listaEquipamentos.remove(index.intValue());}
+    public void removerEquipamentos(Integer index){
+
+        this.listaEquipamentos.remove(index.intValue());
+    }
 
     public void editarEquipamentos(Integer index, Equipamentos equipamentos){
         Equipamentos procuraEquipamentos = listaEquipamentos.get(index);
