@@ -48,10 +48,7 @@ public class PersonagemManipulacao {
     }
 
 
-    public List<Personagem> selecionarPersonagemPorIndice(Integer index){
-        this.listaDePersonagens.contains(index.intValue());
-        return null;
-    }
+
 
     public Personagem getPersonagem(int index){
         return listaDePersonagens.get(index);
