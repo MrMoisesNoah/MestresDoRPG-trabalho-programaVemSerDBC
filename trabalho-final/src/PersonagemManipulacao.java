@@ -31,7 +31,7 @@ public class PersonagemManipulacao {
         personagemProcurado.setNome(personagem.getNome());
         personagemProcurado.setRaca(personagem.getRaca());
         personagemProcurado.setClasse(personagem.getClasse());
-//        personagemProcurado.setEquipamentos(personagem.getEquipamentos());
+        personagemProcurado.setEquipamentos(personagem.getEquipamentos());
         personagemProcurado.setForca(personagem.getForca());
         personagemProcurado.setDefesa(personagem.getDefesa());
         personagemProcurado.setConstituicao(personagem.getConstituicao());

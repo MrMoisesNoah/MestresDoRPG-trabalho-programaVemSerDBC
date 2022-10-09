@@ -32,36 +32,30 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
     @Override
     public boolean atacar(Personagem personagem1, Personagem personagem2) {
 
-
-        while(personagem2.getPontosVida()>0) {
              double resultadoDados = Dados.dadosValidarAtaque()+personagem1.getForca();
              double resuldadoDano = Dados.dadosCalcularDano()+personagem1.getBonusDano();
              double defesa = personagem2.getDefesa();
-             double pontosVida = personagem1.getPontosVida();
              if (this.classe.equals(ClasseDoPersonagem.ARQUEIRO) && (resultadoDados >= defesa)) {
 
                  System.out.println("O Arqueiro " + personagem1.getNome() + " atira uma flecha certeira no " + personagem2.getNome());
-                 personagem2.setPontosVida(getPontosVida() - resuldadoDano);
+                 personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
                  System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
 
              } else if (this.classe.equals(ClasseDoPersonagem.GUERREIRO) && (resultadoDados >= defesa)) {
 
                  System.out.println("O Guerreiro " + personagem1.getNome() + " acerta um golpe de Espada em " + personagem2.getNome());
-                 personagem2.setPontosVida(getPontosVida() - resuldadoDano);
+                 personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
                  //System.out.println("O personagem " + personagem2.getNome() + " perdeu " + personagem2.getPontosVida() + "Pontos de Vida");
                  System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
 
-             } else if (this.classe.equals(ClasseDoPersonagem.MAGO) && (resultadoDados >= defesa)) {
+             } else if (this.classe.equals(ClasseDoPersonagem.MAGO) && (resultadoDados >= defesa) && personagem2.getPontosVida() > 0) {
                  System.out.println("O Mago " + personagem1.getNome() + " lança uma poderosa bola de fogo no " + personagem2.getNome());
-                 personagem2.setPontosVida(getPontosVida() - resuldadoDano);
+                 personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
                  System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
              } else {
                  System.out.println("Você errou seu Ataque!");
                  return false;
              }
-            System.out.println("O MONSTRO MORREU");
-         }
-
         return false;
     }
 //USAR CAJADO

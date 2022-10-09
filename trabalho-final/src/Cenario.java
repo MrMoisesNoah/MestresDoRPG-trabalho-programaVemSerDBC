@@ -1,7 +1,7 @@
 import java.util.Optional;
 import java.util.Scanner;
 
-     public class Cenario  {
+     public class Cenario    {
 
         private String nomeMestre;
         private int idadeMestre;
@@ -215,19 +215,24 @@ import java.util.Scanner;
         }
 
 
+
+
         public void iniciarBatalha(Jogador jogador, Personagem monstro) {
             int i = 0;
-            while (monstro.getPontosVida() > 0 && jogador.getPersonagemDoJogador().getPontosVida() > 0) {
+
+
+            while (monstro.getPontosVida() < 0 && jogador.getPersonagemDoJogador().getPontosVida() < 0); {
                 System.out.println("Turno :" + ++i);
                 jogador.getPersonagemDoJogador().atacar(jogador.getPersonagemDoJogador(), monstro);
                 System.out.println("Turno :" + ++i);
                 monstro.atacar(monstro, jogador.getPersonagemDoJogador());
             }
-            if(jogador.getPersonagemDoJogador().getPontosVida() <= 0) {
+            if(jogador.getPersonagemDoJogador().getPontosVida() >= 0) {
                 System.out.println("Venceu: " + monstro);
-            } else if (monstro.getPontosVida() <= 0) {
+            } else if (monstro.getPontosVida() >= 0) {
                 System.out.println("Venceu: " + jogador);
             }
+
         }
 
     }
