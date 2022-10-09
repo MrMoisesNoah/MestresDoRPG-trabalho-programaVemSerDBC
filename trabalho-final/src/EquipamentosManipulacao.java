@@ -34,4 +34,9 @@ public class EquipamentosManipulacao {
             System.out.println("Id Itens = " + i +"|" + listaEquipamentos.get(i));
         }
     }
+
+    public Equipamentos selecionarEquipamentoPorIndice(Integer index){
+        Equipamentos equipamentoEscolhido = this.listaEquipamentos.get(index);
+        return equipamentoEscolhido;
+    }
 }

@@ -130,7 +130,7 @@ import java.util.Scanner;
             }
 
         }
-        
+
         public void criarEquipamentos() {
             System.out.println("Criar equipamentos. \n -----------------------");
             int opcao = 0;
@@ -228,6 +228,34 @@ import java.util.Scanner;
             } else if (monstro.getPontosVida() <= 0) {
                 System.out.println("Venceu: " + jogador);
             }
+        }
+
+        public void escolherQualItenParaEquipar(JogadorManipulacao jogador) {
+                int selecao = 0;
+
+                do  {
+                    System.out.println("Digite 1 para Equipar Itens.");
+                    System.out.println("Digite 2 para Continuar o Jogo.");
+                    selecao = menu.nextInt();
+                    menu.nextLine();
+
+                    if(selecao == 1) {
+                        System.out.println("Esta é a lista de todos os equipamentos");
+                        listaEquipamentos.listarEquipamentos();
+                        System.out.print("Digite o numero do id do item que deseja equipar: ");
+                        int indiceDoItem = menu.nextInt();
+                        menu.nextLine();
+                        System.out.println("Esta é a lista de Jogadores: ");
+                        jogadorManipulacao.listarJogador();
+                        System.out.print("Digite o numero do id para qual jogador deseja equipar o item: ");
+                        int indiceDoJogadr = menu.nextInt();
+                        menu.nextLine();
+                        Equipamentos testeEquipamento = listaEquipamentos.selecionarEquipamentoPorIndice(indiceDoItem);
+                        jogadorManipulacao.getJogador(indiceDoJogadr).getPersonagemDoJogador().equiparItem(testeEquipamento);
+                        listaEquipamentos.removerEquipamentos(indiceDoItem);
+                    }
+                } while (selecao == 1);
+
         }
 
     }

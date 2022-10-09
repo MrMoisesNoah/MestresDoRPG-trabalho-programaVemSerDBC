@@ -31,8 +31,9 @@ public class JogadorManipulacao  {
         }
     }
 
-    public List<Jogador> selecionarJogadorPorIndice(Integer index){
-        this.listaJogadores.contains(index.intValue());
+    public List<Jogador> selecionarJogadorPorNome(String nome){
+        this.listaJogadores.stream()
+                .filter(jogador -> jogador.getPersonagemDoJogador().getNome().toLowerCase().contains(nome));
         return null;
     }
 
