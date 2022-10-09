@@ -3,11 +3,16 @@ import java.util.List;
 import java.util.Optional;
 
 public class PersonagemManipulacao {
-    public List<Personagem> getListaDePersonagens() {
-        return listaDePersonagens;
-    }
 
-    private List<Personagem> listaDePersonagens;
+    public List<Personagem> listaDePersonagens;
+
+    public Optional<Personagem> selecionarMonstro() {
+        Optional<Personagem> monstroProcurado = listaDePersonagens.stream()
+                .filter(monstro -> monstro.getTipoPersoangem() == TipoPersoangem.MONSTRO)
+                .findFirst();
+
+        return monstroProcurado;
+    }
 
     public PersonagemManipulacao() {
         this.listaDePersonagens = new ArrayList<>();
@@ -42,15 +47,26 @@ public class PersonagemManipulacao {
         }
     }
 
-    public boolean verificarMonstrosVivos() {
-        Optional<Personagem> listaMonstrosVivos = listaDePersonagens.stream()
-                .filter(monstro -> monstro.getPontosVida() > 0)
-                .findAny();
-        if (listaMonstrosVivos.isPresent()) {
-            System.out.println("TRUE");
-            return true;
-        } else {
-            return false;
-        }
+
+    public List<Personagem> selecionarPersonagemPorIndice(Integer index){
+        this.listaDePersonagens.contains(index.intValue());
+        return null;
     }
+
+    public Personagem getPersonagem(int index){
+        return listaDePersonagens.get(index);
+    }
+
+
+//    public boolean verificarMonstrosVivos() {
+//        Optional<Personagem> listaMonstrosVivos = listaDePersonagens.stream()
+//                .filter(monstro -> monstro.getPontosVida() > 0)
+//                .findAny();
+//        if (listaMonstrosVivos.isPresent()) {
+//            System.out.println("TRUE");
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 }

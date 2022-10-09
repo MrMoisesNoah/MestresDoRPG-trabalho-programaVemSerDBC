@@ -6,15 +6,22 @@ public class teste {
 
 
 
+
         oi.criarPersonagens();
 
 
+        oi.getJogadorManipulacao().getJogador(0);
+        oi.getPersonagemManipulacao().getPersonagem(0);
+
+
+        oi.iniciarBatalha(oi.getJogadorManipulacao().getJogador(0), oi.getPersonagemManipulacao().getPersonagem(0));
 
 
 
 
 
-//        Personagem rawad = new Personagem("Rawad", RacaDoPersonagem.ORC, ClasseDoPersonagem.MAGO, 10,9,8,7, TipoPersoangem.PERSONAGEM_DO_JOGADOR, 20, 30);
+
+        //        Personagem rawad = new Personagem("Rawad", RacaDoPersonagem.ORC, ClasseDoPersonagem.MAGO, 10,9,8,7, TipoPersoangem.PERSONAGEM_DO_JOGADOR, 20, 30);
 //        Personagem orcfeio = new Personagem("Mondrongo", RacaDoPersonagem.ORC, ClasseDoPersonagem.GUERREIRO, 10,10,10,10,TipoPersoangem.MONSTRO, 20,0);
 //
 //        Equipamentos cajado = new Equipamentos("Cajado",TiposItens.CAJADO,20,0,0,0);

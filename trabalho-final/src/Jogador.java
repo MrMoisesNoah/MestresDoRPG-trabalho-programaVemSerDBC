@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Jogador extends Personagem{
+public class Jogador extends JogadorManipulacao{
 
     private String nomeJogador;
     private int idade;
