@@ -2,10 +2,25 @@ import java.util.Scanner;
 
 public class teste {
     public static void main(String[] args) {
+
+        PersonagemManipulacao criadorDePersonagem = new Personagem();
+        EquipamentosManipulacao criadroDeEquipamentos = new EquipamentosManipulacao();
+
         Cenario oi = new Cenario();
 
 
 
+
+
+
+        Equipamentos cajado = new Equipamentos("Cajado",TiposItens.CAJADO,20,0,0,0);
+        Equipamentos escudo = new Equipamentos("Escudo",TiposItens.ESCUDO,0,5,0,0);
+        Equipamentos pocao =  new Equipamentos("Pocao",TiposItens.POCAO_VIDA,0,0,10,0);
+        Equipamentos pocaoMana = new Equipamentos("PocaoMana",TiposItens.POCAO_MANA,0,0,0,10);
+        criadorDePersonagem.adicionarPersonagem(rawad);
+        criadorDePersonagem.adicionarPersonagem(orcfeio);
+
+        criadorDePersonagem.listarPersonagem();
 
         oi.criarPersonagens();
 
@@ -19,6 +34,13 @@ public class teste {
 
 
 
+        rawad.atacar(orcfeio);
+        rawad.atacar(orcfeio);
+        rawad.atacar(orcfeio);
+
+
+        criadorDePersonagem.removerPersonagemPorIndice(orcfeio);
+        criadorDePersonagem.listarPersonagem();
 
 
         //        Personagem rawad = new Personagem("Rawad", RacaDoPersonagem.ORC, ClasseDoPersonagem.MAGO, 10,9,8,7, TipoPersoangem.PERSONAGEM_DO_JOGADOR, 20, 30);
