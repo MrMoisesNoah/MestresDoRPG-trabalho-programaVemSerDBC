@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-10T05:27:13.113Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="qXmvA7aldH7IY4pK3UCG" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-10T06:09:06.300Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="ARbAMVQ9bzX3IBbOIrlY" version="20.4.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="3170" dy="2100" grid="1" gridSize="19" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2415" dy="1745" grid="1" gridSize="19" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -170,16 +170,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="i_C0AF-9v9BAxJ9rnjFK-1" value="CRUDS.PersonagemManipulacao" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-136.35" y="152.5" width="240" height="35" as="geometry" />
+          <mxGeometry x="-266" y="152.5" width="304" height="35" as="geometry" />
         </mxCell>
         <mxCell id="i_C0AF-9v9BAxJ9rnjFK-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-136.35" y="187.5" width="240" height="98" as="geometry" />
+          <mxGeometry x="-266" y="187.5" width="304" height="98" as="geometry" />
         </mxCell>
         <mxCell id="i_C0AF-9v9BAxJ9rnjFK-4" value="+adicionarPersonagem(): void&#xa;+removerPersonagem(): void&#xa;+editarPersonagem(): void&#xa;+listarPersonagem(): void&#xa;+selecionarPersonagem(): ClassesUteis.Personagem" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-136.35" y="187.5" width="240" height="76" as="geometry" />
+          <mxGeometry x="-266" y="189" width="307.35" height="76" as="geometry" />
         </mxCell>
         <mxCell id="i_C0AF-9v9BAxJ9rnjFK-6" value="CRUDS.EquipamentosManipulacao" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="893" y="-89.5" width="304" height="30" as="geometry" />
+          <mxGeometry x="893" y="-89.5" width="361" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.456;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="i_C0AF-9v9BAxJ9rnjFK-7" target="aQi3MAtJLsASPVlaxSXh-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -188,7 +188,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="i_C0AF-9v9BAxJ9rnjFK-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="893" y="-59.5" width="304" height="90" as="geometry" />
+          <mxGeometry x="893" y="-59.5" width="361" height="90" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="i_C0AF-9v9BAxJ9rnjFK-11" target="7tbVIV-6kWvi_5owY3Rs-0" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -213,7 +213,7 @@
           <mxGeometry x="513" y="380" width="171" height="76" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-9" value="+adicionarEquipamentos(): void&lt;br&gt;+removerEquipamentos(): void&lt;br&gt;+editarEquipamentos(): void&lt;br&gt;+listarEquipamentos(): void&lt;br&gt;+selecionarEquipamentosPorIndice(): ClassesUteis.Equipamentos" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="893" y="-70.5" width="323" height="95" as="geometry" />
+          <mxGeometry x="893" y="-64.5" width="323" height="95" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-26" value="+inciarJogo(): void&lt;br&gt;+criarPersonagem(): void&lt;br&gt;+criarEquipamentos(): void&lt;br&gt;+iniciarBatalha(): void&lt;br&gt;+escolherQualItenParaEquipar(): void&lt;br&gt;+iniciarHistoria(): void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="91.49999999999997" y="-252" width="247" height="95" as="geometry" />
