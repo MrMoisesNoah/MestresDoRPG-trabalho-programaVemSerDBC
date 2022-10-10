@@ -1,4 +1,4 @@
-
+package ClassesUteis;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class Mestre {
 
     @Override
     public String toString() {
-        return "Mestre{" +
+        return "ClassesUteis.Mestre{" +
                 "nomeMestre='" + nomeMestre + '\'' +
                 ", idadeMestre=" + idadeMestre +
                 ", personagensMestre=" + personagensMestre +

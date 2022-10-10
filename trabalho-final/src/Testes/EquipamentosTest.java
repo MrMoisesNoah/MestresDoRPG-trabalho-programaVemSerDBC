@@ -1,3 +1,7 @@
+package Testes;
+
+import ClassesUteis.Equipamentos;
+import ENUNS.TiposItens;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

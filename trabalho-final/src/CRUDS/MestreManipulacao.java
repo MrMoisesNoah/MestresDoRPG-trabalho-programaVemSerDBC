@@ -1,3 +1,5 @@
+package CRUDS;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +30,7 @@ public class MestreManipulacao {
 
     public void listarMestre(){
         for(int i =0; i<listaMestre.size(); i++){
-            System.out.println("Id Jogador = "+i+"|"+ listaMestre.get(i));
+            System.out.println("Id ClassesUteis.Jogador = "+i+"|"+ listaMestre.get(i));
         }
     }
 

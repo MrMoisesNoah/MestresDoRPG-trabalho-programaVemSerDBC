@@ -1,3 +1,7 @@
+package ClassesUteis;
+
+import ENUNS.TiposItens;
+
 public class Equipamentos {
     private String nomeEquipamento;
     private TiposItens tipo;
@@ -69,7 +73,7 @@ public class Equipamentos {
 
     @Override
     public String toString() {
-        return "Equipamentos{" +
+        return "ClassesUteis.Equipamentos{" +
                 "nomeEquipamento='" + nomeEquipamento + '\'' +
                 ", tipo=" + tipo +
                 ", dano=" + dano +

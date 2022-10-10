@@ -1,3 +1,5 @@
+package ClassesUteis;
+
 public class Dados {
 
     static public double dadosValidarAtaque() {

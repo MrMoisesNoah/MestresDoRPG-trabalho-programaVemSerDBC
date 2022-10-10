@@ -1,4 +1,6 @@
-    public interface AcoesPersonagens {
+package Interfaces;
+
+public interface AcoesPersonagens {
 
         boolean atacar(Personagem personagem1, Personagem personagem2);
         boolean usarCajado(Personagem personagem1, Personagem personagem2);

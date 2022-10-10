@@ -1,6 +1,8 @@
-import java.util.List;
+package ClassesUteis;
 
-public class Jogador extends JogadorManipulacao{
+import CRUDS.JogadorManipulacao;
+
+public class Jogador extends JogadorManipulacao {
 
     private String nomeJogador;
     private int idade;
@@ -45,7 +47,7 @@ public class Jogador extends JogadorManipulacao{
 
     @Override
     public String toString() {
-        return "Jogador{" +
+        return "ClassesUteis.Jogador{" +
                 "nomeJogador='" + nomeJogador + '\'' +
                 ", idade=" + idade +
                 ", personagemDoJogador=" + personagemDoJogador +

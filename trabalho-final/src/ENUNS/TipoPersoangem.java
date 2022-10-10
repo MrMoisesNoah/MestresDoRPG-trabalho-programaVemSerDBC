@@ -1,7 +1,9 @@
+package ENUNS;
+
 public enum TipoPersoangem {
-    PERSONAGEM_DO_JOGADOR("Personagem do jogador.", 1),
-    NPC("Personagem do Mestre", 2),
-    MONSTRO("Monstro do Mestre", 3);
+    PERSONAGEM_DO_JOGADOR("ClassesUteis.Personagem do jogador.", 1),
+    NPC("ClassesUteis.Personagem do ClassesUteis.Mestre", 2),
+    MONSTRO("Monstro do ClassesUteis.Mestre", 3);
 
     public String getDescricao() {
         return descricao;

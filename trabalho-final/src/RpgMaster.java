@@ -1,3 +1,6 @@
+import CRUDS.VerificarJogadorException;
+import ClassesUteis.Cenario;
+
 import java.util.Scanner;
 
 public class RpgMaster {
@@ -54,7 +57,7 @@ public class RpgMaster {
                 vdd = false;
             }
         } catch (VerificarJogadorException exception) {
-            System.out.println("Jogador inexistente, crie um jogador.");
+            System.out.println("ClassesUteis.Jogador inexistente, crie um jogador.");
             verificarJogador(scanner, cenario, vdd);
         }
 

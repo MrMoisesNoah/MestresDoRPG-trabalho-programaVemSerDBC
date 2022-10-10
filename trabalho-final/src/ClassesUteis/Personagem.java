@@ -1,6 +1,12 @@
-import java.util.List;
+package ClassesUteis;
 
-public class Personagem implements AcoesPersonagens{
+import ENUNS.ClasseDoPersonagem;
+import ENUNS.RacaDoPersonagem;
+import ENUNS.TipoPersoangem;
+import ENUNS.TiposItens;
+import Interfaces.AcoesPersonagens;
+
+public class Personagem implements AcoesPersonagens {
 
     //INFORMAÇÕES
 
@@ -83,11 +89,11 @@ public class Personagem implements AcoesPersonagens{
         }else if (equipamentos.getTipo() == TiposItens.ESCUDO && !(this.getClasse()==ClasseDoPersonagem.MAGO)) {
             this.setDefesa(this.getDefesa() + equipamentos.getDefesa());
             System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());
-        } else if (equipamentos.getTipo() == TiposItens.CAJADO && this.getClasse()==ClasseDoPersonagem.MAGO){
+        } else if (equipamentos.getTipo() == TiposItens.CAJADO && this.getClasse()== ClasseDoPersonagem.MAGO){
             this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
             System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());}
         else {
-            System.out.println("Seu Personagem não pode Equipar este item.");
+            System.out.println("Seu ClassesUteis.Personagem não pode Equipar este item.");
             return false;
         }
         return false;
@@ -208,7 +214,7 @@ public class Personagem implements AcoesPersonagens{
 
     @Override
     public String toString() {
-        return "Personagem{" +
+        return "ClassesUteis.Personagem{" +
                 "nome='" + nome + '\'' +
                 ", raca=" + raca +
                 ", classe=" + classe +

@@ -1,3 +1,7 @@
+package CRUDS;
+
+import ClassesUteis.Jogador;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -30,7 +34,7 @@ public class JogadorManipulacao  {
 
     public void listarJogador(){
         for(int i =0; i<listaJogadores.size(); i++){
-            System.out.println("Id Jogador = "+i+"|"+ listaJogadores.get(i));
+            System.out.println("Id ClassesUteis.Jogador = "+i+"|"+ listaJogadores.get(i));
         }
     }
 
@@ -47,7 +51,7 @@ public class JogadorManipulacao  {
         if (testando.isPresent()) {
             return true;
         } else {
-            throw new VerificarJogadorException("Jogador inexistente, construir jogador novo");
+            throw new VerificarJogadorException("ClassesUteis.Jogador inexistente, construir jogador novo");
         }
     }
 }

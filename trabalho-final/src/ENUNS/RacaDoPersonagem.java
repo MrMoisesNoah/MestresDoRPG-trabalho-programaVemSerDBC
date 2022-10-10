@@ -1,3 +1,5 @@
+package ENUNS;
+
 public enum RacaDoPersonagem {
 
     HOMEM("Homem","Bonus de Defesa", 5),

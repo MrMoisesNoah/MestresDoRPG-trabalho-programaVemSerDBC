@@ -1,3 +1,5 @@
+package CRUDS;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +47,7 @@ public class PersonagemManipulacao {
 
 
 //    public boolean verificarMonstrosVivos() {
-//        Optional<Personagem> listaMonstrosVivos = listaDePersonagens.stream()
+//        Optional<ClassesUteis.Personagem> listaMonstrosVivos = listaDePersonagens.stream()
 //                .filter(monstro -> monstro.getPontosVida() > 0)
 //                .findAny();
 //        if (listaMonstrosVivos.isPresent()) {

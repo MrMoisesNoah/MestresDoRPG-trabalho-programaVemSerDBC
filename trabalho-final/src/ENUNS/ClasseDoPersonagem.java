@@ -1,3 +1,5 @@
+package ENUNS;
+
 public enum ClasseDoPersonagem {
 
     GUERREIRO("Guerreiro","Especialista Curta distancia, bonus com espadas", 5),

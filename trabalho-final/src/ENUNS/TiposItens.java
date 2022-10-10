@@ -1,3 +1,5 @@
+package ENUNS;
+
 public enum TiposItens {
 
     ARMADURA(),

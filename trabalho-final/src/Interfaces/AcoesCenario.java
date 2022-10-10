@@ -1,4 +1,6 @@
-    public interface AcoesCenario {
+package Interfaces;
+
+public interface AcoesCenario {
         void iniciarJogo();
 
         void criarPersonagens();

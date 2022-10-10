@@ -1,4 +1,14 @@
-import java.util.Optional;
+package ClassesUteis;
+
+import CRUDS.EquipamentosManipulacao;
+import CRUDS.JogadorManipulacao;
+import CRUDS.PersonagemManipulacao;
+import ENUNS.ClasseDoPersonagem;
+import ENUNS.RacaDoPersonagem;
+import ENUNS.TipoPersoangem;
+import ENUNS.TiposItens;
+import Interfaces.AcoesCenario;
+
 import java.util.Scanner;
 
      public class Cenario implements AcoesCenario {
@@ -66,10 +76,10 @@ import java.util.Scanner;
 
         public void iniciarJogo() {
             System.out.println("Bem vindo aventureiro");
-            System.out.println("Digite o nome do Mestre");
+            System.out.println("Digite o nome do ClassesUteis.Mestre");
             nomeMestre = menu.nextLine();
             mestre.setNomeMestre(nomeMestre);
-            System.out.println("Digite a idade do Mestre");
+            System.out.println("Digite a idade do ClassesUteis.Mestre");
             int idadeMestre = menu.nextInt();
             mestre.setIdadeMestre(idadeMestre);
         }
@@ -80,7 +90,7 @@ import java.util.Scanner;
             int opcao = 0;
             while (opcao != 3) {
                 System.out.println("Digite 1 para criar um monstro");
-                System.out.println("Digite 2 para criar um Jogador");
+                System.out.println("Digite 2 para criar um ClassesUteis.Jogador");
                 System.out.println("Digite 3 para iniciar Historia.");
                 opcao = menu.nextInt();
                 menu.nextLine();
@@ -114,9 +124,9 @@ import java.util.Scanner;
 
                     case 2 -> {
                         menu.nextLine();
-                        System.out.print("Digete o nome do Jogador: ");
+                        System.out.print("Digete o nome do ClassesUteis.Jogador: ");
                         String nomeJogador = menu.nextLine();
-                        System.out.print("Digete a idade do Jogador: ");
+                        System.out.print("Digete a idade do ClassesUteis.Jogador: ");
                         int idadeJogador = menu.nextInt();
                         TipoPersoangem tipoPersonagem = TipoPersoangem.PERSONAGEM_DO_JOGADOR;
                         Personagem personagemJogador = new Personagem(nome, RacaDoPersonagem.valueOf(raca), ClasseDoPersonagem.valueOf(classe), forca, defesa, constituicao, inteligencia, tipoPersonagem, pontosVida, pontosMana);

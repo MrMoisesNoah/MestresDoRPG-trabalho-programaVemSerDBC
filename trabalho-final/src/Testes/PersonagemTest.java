@@ -1,3 +1,9 @@
+package Testes;
+
+import ClassesUteis.Personagem;
+import ENUNS.ClasseDoPersonagem;
+import ENUNS.RacaDoPersonagem;
+import ENUNS.TipoPersoangem;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
