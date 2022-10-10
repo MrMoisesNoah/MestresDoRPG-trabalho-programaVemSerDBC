@@ -1,12 +1,8 @@
-import java.util.Optional;
 import java.util.Scanner;
 
-     public class Cenario    {
+     public class Cenario implements AcoesCenario {
 
         private String nomeMestre;
-        private int idadeMestre;
-        private String nomeJogador;
-        private int idadeJogador;
         private Mestre mestre = new Mestre();
         private String nome;
         private String raca;
@@ -60,20 +56,20 @@ import java.util.Scanner;
          private Scanner menu = new Scanner(System.in);
 
          public Personagem getPersonagemJogador(int index){
-             return jogadorManipulacao.getJogador(index).getPersonagemDoJogador();
+             return jogadorManipulacao.selecionarJogador(index).getPersonagemDoJogador();
          }
 
          public Personagem getMonstro(int index) {
-             return personagemManipulacao.getPersonagem(index);
+             return personagemManipulacao.selecionarPersonagem(index);
          }
 
-        public void inicarJogo() {
+        public void iniciarJogo() {
             System.out.println("Bem vindo aventureiro");
             System.out.println("Digite o nome do Mestre");
             nomeMestre = menu.nextLine();
             mestre.setNomeMestre(nomeMestre);
             System.out.println("Digite a idade do Mestre");
-            idadeMestre = menu.nextInt();
+            int idadeMestre = menu.nextInt();
             mestre.setIdadeMestre(idadeMestre);
         }
 
@@ -118,9 +114,9 @@ import java.util.Scanner;
                     case 2 -> {
                         menu.nextLine();
                         System.out.print("Digete o nome do Jogador: ");
-                        nomeJogador = menu.nextLine();
+                        String nomeJogador = menu.nextLine();
                         System.out.print("Digete a idade do Jogador: ");
-                        idadeJogador = menu.nextInt();
+                        int idadeJogador = menu.nextInt();
                         TipoPersoangem tipoPersonagem = TipoPersoangem.PERSONAGEM_DO_JOGADOR;
                         Personagem personagemJogador = new Personagem(nome, RacaDoPersonagem.valueOf(raca), ClasseDoPersonagem.valueOf(classe), forca, defesa, constituicao, inteligencia, tipoPersonagem, pontosVida, pontosMana);
                         jogadorManipulacao.adicionarJogador(new Jogador(nomeJogador, idadeJogador, personagemJogador));
@@ -225,12 +221,14 @@ import java.util.Scanner;
             }
             if(jogador.getPersonagemDoJogador().getPontosVida() <= 0) {
                 System.out.println("Venceu: " + monstro);
+                jogadorManipulacao.removerJogador(jogador);
             } else if (monstro.getPontosVida() <= 0) {
                 System.out.println("Venceu: " + jogador);
+                personagemManipulacao.removerPersonagem(monstro);
             }
         }
 
-        public void escolherQualItenParaEquipar(JogadorManipulacao jogador) {
+        public void escolherQualItenParaEquipar() {
                 int selecao = 0;
 
                 do  {
@@ -251,12 +249,28 @@ import java.util.Scanner;
                         int indiceDoJogadr = menu.nextInt();
                         menu.nextLine();
                         Equipamentos testeEquipamento = listaEquipamentos.selecionarEquipamentoPorIndice(indiceDoItem);
-                        jogadorManipulacao.getJogador(indiceDoJogadr).getPersonagemDoJogador().equiparItem(testeEquipamento);
+                        jogadorManipulacao.selecionarJogador(indiceDoJogadr).getPersonagemDoJogador().equiparItem(testeEquipamento);
+                        jogadorManipulacao.selecionarJogador(indiceDoJogadr).getPersonagemDoJogador().setBonusDano
+                                (getPersonagemJogador(indiceDoJogadr).getBonusDano() + testeEquipamento.getDano());
+                        jogadorManipulacao.selecionarJogador(indiceDoJogadr).getPersonagemDoJogador().setBonusDefesa
+                                (getPersonagemJogador(indiceDoJogadr).getBonusDefesa() + testeEquipamento.getDefesa());
                         listaEquipamentos.removerEquipamentos(indiceDoItem);
                     }
                 } while (selecao == 1);
 
         }
 
+        int cena = 1;
+
+        public void iniciarHistoria() {
+
+            String sairCenario;
+            System.out.print("Cena " + cena + "  ---- Termine sua historia com  ! " + " \n \n");
+            ++cena;
+            do {
+                sairCenario = menu.nextLine();
+
+            } while (!sairCenario.contains("!"));
+        }
     }
 

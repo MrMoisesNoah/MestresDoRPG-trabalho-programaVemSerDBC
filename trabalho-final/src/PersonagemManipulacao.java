@@ -1,18 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class PersonagemManipulacao {
 
     public List<Personagem> listaDePersonagens;
 
-    public Optional<Personagem> selecionarMonstro() {
-        Optional<Personagem> monstroProcurado = listaDePersonagens.stream()
-                .filter(monstro -> monstro.getTipoPersoangem() == TipoPersoangem.MONSTRO)
-                .findFirst();
-
-        return monstroProcurado;
-    }
 
     public PersonagemManipulacao() {
         this.listaDePersonagens = new ArrayList<>();
@@ -22,7 +14,7 @@ public class PersonagemManipulacao {
         this.listaDePersonagens.add(personagem);
     }
 
-    public void removerPersonagemPorIndice(Personagem personagem) {
+    public void removerPersonagem (Personagem personagem) {
         this.listaDePersonagens.remove(personagem);
     }
 
@@ -31,7 +23,6 @@ public class PersonagemManipulacao {
         personagemProcurado.setNome(personagem.getNome());
         personagemProcurado.setRaca(personagem.getRaca());
         personagemProcurado.setClasse(personagem.getClasse());
-        personagemProcurado.setEquipamentos(personagem.getEquipamentos());
         personagemProcurado.setForca(personagem.getForca());
         personagemProcurado.setDefesa(personagem.getDefesa());
         personagemProcurado.setConstituicao(personagem.getConstituicao());
@@ -48,9 +39,7 @@ public class PersonagemManipulacao {
     }
 
 
-
-
-    public Personagem getPersonagem(int index){
+    public Personagem selecionarPersonagem(int index){
         return listaDePersonagens.get(index);
     }
 
