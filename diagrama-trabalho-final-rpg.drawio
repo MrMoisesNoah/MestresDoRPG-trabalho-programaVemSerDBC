@@ -22,7 +22,7 @@
         <mxCell id="aQi3MAtJLsASPVlaxSXh-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="82.65" y="-426" width="280" height="179" as="geometry" />
         </mxCell>
-        <mxCell id="aQi3MAtJLsASPVlaxSXh-6" value="Equipamentos" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aQi3MAtJLsASPVlaxSXh-6" value="ClassesUteis.Equipamentos" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="944.5" y="87" width="220" height="30" as="geometry" />
         </mxCell>
         <mxCell id="aQi3MAtJLsASPVlaxSXh-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
@@ -43,7 +43,7 @@
         <mxCell id="aQi3MAtJLsASPVlaxSXh-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="944.5" y="117" width="220" height="115.5" as="geometry" />
         </mxCell>
-        <mxCell id="aQi3MAtJLsASPVlaxSXh-18" value="Personagem&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aQi3MAtJLsASPVlaxSXh-18" value="ClassesUteis.Personagem&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="513" y="152.5" width="247" height="35" as="geometry" />
         </mxCell>
         <mxCell id="pw85wmvpRaySXr9k1KnQ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="pw85wmvpRaySXr9k1KnQ-3" edge="1">
@@ -87,16 +87,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aQi3MAtJLsASPVlaxSXh-21" value="-nome: String&#xa;-raca: RacaDoPersonagem&#xa;-classe: ClasseDoPersonagem&#xa;-tipo: TipoPersonagem&#xa;-forca: double&#xa;-defesa: double&#xa;-constituicao: double&#xa;-inteligencia: double&#xa;-pontosVida: double&#xa;-pontosMana: double&#xa;-bonusDano: double&#xa;-bonusDefesa: double&#xa;&#xa;&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aQi3MAtJLsASPVlaxSXh-21" value="-nome: String&#xa;-raca: ENUNS.RacaDoPersonagem&#xa;-classe: ENUNS.ClasseDoPersonagem&#xa;-tipo: TipoPersonagem&#xa;-forca: double&#xa;-defesa: double&#xa;-constituicao: double&#xa;-inteligencia: double&#xa;-pontosVida: double&#xa;-pontosMana: double&#xa;-bonusDano: double&#xa;-bonusDefesa: double&#xa;&#xa;&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="513" y="187.5" width="240" height="173.5" as="geometry" />
         </mxCell>
         <mxCell id="aQi3MAtJLsASPVlaxSXh-22" value="-nomeEquipamento: String&#xa;-tipo: TipoItens&#xa;-dano: double&#xa;-defesa: double&#xa;-pontosVida: double&#xa;-pontoMana: double" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="944.5" y="117" width="187" height="134.5" as="geometry" />
         </mxCell>
-        <mxCell id="aQi3MAtJLsASPVlaxSXh-23" value="-nomeMestre: String&#xa;-mestre: Mestre&#xa;-nome: String&#xa;-raca: String&#xa;-classe: String&#xa;-forca: double&#xa;-defesa: double&#xa;-constituicao: double&#xa;-inteligencia: double&#xa;-pontosVida: double&#xa;-pontosMana: double" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aQi3MAtJLsASPVlaxSXh-23" value="-nomeMestre: String&#xa;-mestre: ClassesUteis.Mestre&#xa;-nome: String&#xa;-raca: String&#xa;-classe: String&#xa;-forca: double&#xa;-defesa: double&#xa;-constituicao: double&#xa;-inteligencia: double&#xa;-pontosVida: double&#xa;-pontosMana: double" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="100" y="-426" width="166" height="174" as="geometry" />
         </mxCell>
-        <mxCell id="aqDDlLiModhRZFDufuGG-31" value="Dados" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="aqDDlLiModhRZFDufuGG-31" value="ClassesUteis.Dados" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="380.00000000000017" y="494" width="241.31" height="30" as="geometry" />
         </mxCell>
         <mxCell id="aqDDlLiModhRZFDufuGG-33" value="+dadosValidarAtaque(): double&lt;br&gt;+dadosCalcularDano(): double" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -107,15 +107,15 @@
             <mxPoint x="638" y="152" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7tbVIV-6kWvi_5owY3Rs-0" value="Jogador&#xa;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="7tbVIV-6kWvi_5owY3Rs-0" value="ClassesUteis.Jogador&#xa;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="513" y="-89.5" width="250" height="95" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7tbVIV-6kWvi_5owY3Rs-1" value="-nomeJogador: String&#xa;-idadeJogador: int&#xa;-personagemDoJogador: Personagem" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="7tbVIV-6kWvi_5owY3Rs-0" vertex="1">
+        <mxCell id="7tbVIV-6kWvi_5owY3Rs-1" value="-nomeJogador: String&#xa;-idadeJogador: int&#xa;-personagemDoJogador: ClassesUteis.Personagem" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="7tbVIV-6kWvi_5owY3Rs-0" vertex="1">
           <mxGeometry y="26" width="250" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="7tbVIV-6kWvi_5owY3Rs-14" value="&lt;&lt;interface&gt;&gt;&#xa;AcoesPersonagens" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="7tbVIV-6kWvi_5owY3Rs-14" value="&lt;&lt;interface&gt;&gt;&#xa;Interfaces.AcoesPersonagens" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-57" y="380" width="250" height="133" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -139,7 +139,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="pw85wmvpRaySXr9k1KnQ-0" value="&lt;&lt;enum&gt;&gt;&#xa;ClasseDoPersonagem" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="pw85wmvpRaySXr9k1KnQ-0" value="&lt;&lt;enum&gt;&gt;&#xa;ENUNS.ClasseDoPersonagem" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-57" y="532" width="250" height="109.5" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -147,7 +147,7 @@
         <mxCell id="pw85wmvpRaySXr9k1KnQ-33" value="GUERREIRO(),&lt;br&gt;ARQUEIRO(),&lt;br&gt;MAGO();" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="pw85wmvpRaySXr9k1KnQ-0" vertex="1">
           <mxGeometry y="38" width="250" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="pw85wmvpRaySXr9k1KnQ-3" value="&lt;&lt;enum&gt;&gt;&#xa;RacaDoPersonagem" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="pw85wmvpRaySXr9k1KnQ-3" value="&lt;&lt;enum&gt;&gt;&#xa;ENUNS.RacaDoPersonagem" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-57" y="684" width="250" height="114" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -167,16 +167,16 @@
             <mxPoint x="433" y="348.82" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-1" value="PersonagemManipulacao" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-1" value="CRUDS.PersonagemManipulacao" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="95" y="103.5" width="240" height="35" as="geometry" />
         </mxCell>
         <mxCell id="i_C0AF-9v9BAxJ9rnjFK-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="95" y="138.5" width="240" height="98" as="geometry" />
         </mxCell>
-        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-4" value="+adicionarPersonagem(): void&#xa;+removerPersonagem(): void&#xa;+editarPersonagem(): void&#xa;+listarPersonagem(): void&#xa;+selecionarPersonagem(): Personagem" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-4" value="+adicionarPersonagem(): void&#xa;+removerPersonagem(): void&#xa;+editarPersonagem(): void&#xa;+listarPersonagem(): void&#xa;+selecionarPersonagem(): ClassesUteis.Personagem" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="95" y="138.5" width="240" height="76" as="geometry" />
         </mxCell>
-        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-6" value="EquipamentosManipulacao" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-6" value="CRUDS.EquipamentosManipulacao" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="893" y="-89.5" width="304" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.456;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="i_C0AF-9v9BAxJ9rnjFK-7" target="aQi3MAtJLsASPVlaxSXh-6">
@@ -191,12 +191,12 @@
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="i_C0AF-9v9BAxJ9rnjFK-11" target="7tbVIV-6kWvi_5owY3Rs-0">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-11" value="JogadorManipulacao&#xa;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="i_C0AF-9v9BAxJ9rnjFK-11" value="CRUDS.JogadorManipulacao&#xa;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="513" y="-297" width="250" height="121" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xMzIyeOoaKzMOS7QW3ga-23" value="+adicionarJogador(): void&lt;br&gt;+removerJogador(): void&lt;br&gt;+editarJogador(): void&lt;br&gt;+listarJogador(): void&lt;br&gt;+selecionarJogador(): Jogador" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="i_C0AF-9v9BAxJ9rnjFK-11">
+        <mxCell id="xMzIyeOoaKzMOS7QW3ga-23" value="+adicionarJogador(): void&lt;br&gt;+removerJogador(): void&lt;br&gt;+editarJogador(): void&lt;br&gt;+listarJogador(): void&lt;br&gt;+selecionarJogador(): ClassesUteis.Jogador" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="i_C0AF-9v9BAxJ9rnjFK-11">
           <mxGeometry y="26" width="250" height="95" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xMzIyeOoaKzMOS7QW3ga-5" target="aqDDlLiModhRZFDufuGG-33">
@@ -210,13 +210,13 @@
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-6" value="&lt;div style=&quot;direction: ltr;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+atacar(): boolean&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;direction: ltr;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+usarCajado(): boolean&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;direction: ltr;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+equiparItem: boolean&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;direction: ltr;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+usarPocao: boolean&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="513" y="380" width="171" height="76" as="geometry" />
         </mxCell>
-        <mxCell id="xMzIyeOoaKzMOS7QW3ga-9" value="+adicionarEquipamentos(): void&lt;br&gt;+removerEquipamentos(): void&lt;br&gt;+editarEquipamentos(): void&lt;br&gt;+listarEquipamentos(): void&lt;br&gt;+selecionarEquipamentosPorIndice(): Equipamentos" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="xMzIyeOoaKzMOS7QW3ga-9" value="+adicionarEquipamentos(): void&lt;br&gt;+removerEquipamentos(): void&lt;br&gt;+editarEquipamentos(): void&lt;br&gt;+listarEquipamentos(): void&lt;br&gt;+selecionarEquipamentosPorIndice(): ClassesUteis.Equipamentos" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="893" y="-70.5" width="323" height="95" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-26" value="+inciarJogo(): void&lt;br&gt;+criarPersonagem(): void&lt;br&gt;+criarEquipamentos(): void&lt;br&gt;+iniciarBatalha(): void&lt;br&gt;+escolherQualItenParaEquipar(): void&lt;br&gt;+iniciarHistoria(): void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="91.49999999999997" y="-252" width="247" height="95" as="geometry" />
         </mxCell>
-        <mxCell id="xMzIyeOoaKzMOS7QW3ga-29" value="Mestre" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="xMzIyeOoaKzMOS7QW3ga-29" value="ClassesUteis.Mestre" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="103.65" y="-108.5" width="259" height="30" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-30" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -228,7 +228,7 @@
             <mxPoint x="111.65" y="-100.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xMzIyeOoaKzMOS7QW3ga-32" value="-nomeMestre: String&lt;br&gt;-idadeMestre: int&lt;br&gt;-personagensMestre: List&amp;lt;Personagem&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="xMzIyeOoaKzMOS7QW3ga-32" value="-nomeMestre: String&lt;br&gt;-idadeMestre: int&lt;br&gt;-personagensMestre: List&amp;lt;ClassesUteis.Personagem&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="108.65" y="-65" width="235" height="41" as="geometry" />
         </mxCell>
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-35" value="imprimirMestre(): void" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -250,7 +250,7 @@
         <mxCell id="xMzIyeOoaKzMOS7QW3ga-45" value="PERSONAGEM_DO_JOGADOR(),&lt;br&gt;MONSTRO(),&lt;br&gt;NPC();" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="xMzIyeOoaKzMOS7QW3ga-44">
           <mxGeometry y="38" width="250" height="57" as="geometry" />
         </mxCell>
-        <mxCell id="xMzIyeOoaKzMOS7QW3ga-50" value="&lt;&lt;interface&gt;&gt;&#xa;AcoesCenario" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="xMzIyeOoaKzMOS7QW3ga-50" value="&lt;&lt;interface&gt;&gt;&#xa;Interfaces.AcoesCenario" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=38;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="753" y="-507.5" width="250" height="133" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
