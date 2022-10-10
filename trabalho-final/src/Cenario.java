@@ -1,3 +1,4 @@
+import java.util.Optional;
 import java.util.Scanner;
 
      public class Cenario implements AcoesCenario {
@@ -80,7 +81,7 @@ import java.util.Scanner;
             while (opcao != 3) {
                 System.out.println("Digite 1 para criar um monstro");
                 System.out.println("Digite 2 para criar um Jogador");
-                System.out.println("Digite 3 para sair");
+                System.out.println("Digite 3 para iniciar Historia.");
                 opcao = menu.nextInt();
                 menu.nextLine();
 
@@ -272,5 +273,6 @@ import java.util.Scanner;
 
             } while (!sairCenario.contains("!"));
         }
+
     }
 

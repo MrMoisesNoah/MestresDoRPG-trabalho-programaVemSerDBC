@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class JogadorManipulacao  {
 
@@ -39,5 +40,14 @@ public class JogadorManipulacao  {
     }
 
 
-
+    public boolean testarJogador(JogadorManipulacao teste) throws VerificarJogadorException {
+        Optional<Jogador> testando = listaJogadores.stream()
+                .filter(jogador -> listaJogadores.contains(jogador))
+                .findFirst();
+        if (testando.isPresent()) {
+            return true;
+        } else {
+            throw new VerificarJogadorException("Jogador inexistente, construir jogador novo");
+        }
+    }
 }
