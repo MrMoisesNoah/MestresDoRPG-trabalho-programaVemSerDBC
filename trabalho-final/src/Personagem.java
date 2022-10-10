@@ -28,30 +28,34 @@ public class Personagem implements AcoesPersonagens {
     @Override
     public boolean atacar(Personagem personagem1, Personagem personagem2) {
 
-             double resultadoDados = Dados.dadosValidarAtaque()+personagem1.getForca();
-             double resuldadoDano = Dados.dadosCalcularDano()+personagem1.getBonusDano();
-             double defesa = personagem2.getDefesa();
-             if (this.classe.equals(ClasseDoPersonagem.ARQUEIRO) && (resultadoDados >= defesa)) {
+        double resultadoDados = Dados.dadosValidarAtaque()+personagem1.getForca();
+        double resuldadoDano = Dados.dadosCalcularDano()+personagem1.getBonusDano();
+        double ataqueMago = Dados.dadosValidarAtaque()+personagem1.getInteligencia();
+        double danoMago = Dados.dadosCalcularDano()+ personagem1.getInteligencia();
+        double defesa = personagem2.getDefesa();
+        if (this.classe.equals(ClasseDoPersonagem.ARQUEIRO) && (resultadoDados >= defesa)) {
 
-                 System.out.println("O Arqueiro " + personagem1.getNome() + " atira uma flecha certeira no " + personagem2.getNome());
-                 personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
-                 System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+            System.out.println("O Arqueiro " + personagem1.getNome() + " atira uma flecha certeira no " + personagem2.getNome());
+            personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
+            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
 
-             } else if (this.classe.equals(ClasseDoPersonagem.GUERREIRO) && (resultadoDados >= defesa)) {
+        } else if (this.classe.equals(ClasseDoPersonagem.GUERREIRO) && (resultadoDados >= defesa)) {
 
-                 System.out.println("O Guerreiro " + personagem1.getNome() + " acerta um golpe de Espada em " + personagem2.getNome());
-                 personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
-                 //System.out.println("O personagem " + personagem2.getNome() + " perdeu " + personagem2.getPontosVida() + "Pontos de Vida");
-                 System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+            System.out.println("O Guerreiro " + personagem1.getNome() + " acerta um golpe de Espada em " + personagem2.getNome());
+            personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
+            //System.out.println("O personagem " + personagem2.getNome() + " perdeu " + personagem2.getPontosVida() + "Pontos de Vida");
+            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
 
-             } else if (this.classe.equals(ClasseDoPersonagem.MAGO) && (resultadoDados >= defesa) && personagem2.getPontosVida() > 0) {
-                 System.out.println("O Mago " + personagem1.getNome() + " lança uma poderosa bola de fogo no " + personagem2.getNome());
-                 personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
-                 System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
-             } else {
-                 System.out.println("Você errou seu Ataque!");
-                 return false;
-             }
+        } else if (this.classe.equals(ClasseDoPersonagem.MAGO) && (ataqueMago >= defesa) && personagem2.getPontosVida() > 0) {
+            System.out.println("O Mago " + personagem1.getNome() + " lança uma poderosa bola de fogo no " + personagem2.getNome());
+            personagem2.setPontosVida(personagem2.getPontosVida() - danoMago);
+            personagem1.setPontosMana(personagem1.getPontosMana() - 5);
+            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+            System.out.println(personagem1.getNome() + " = " + personagem1.getPontosMana() + "PONTOS DE MANA");
+        } else {
+            System.out.println("Você errou seu Ataque!");
+            return false;
+        }
         return false;
     }
 //USAR CAJADO
@@ -81,9 +85,18 @@ public class Personagem implements AcoesPersonagens {
         }else if (equipamentos.getTipo() == TiposItens.ESCUDO && !(this.getClasse()==ClasseDoPersonagem.MAGO)) {
             this.setDefesa(this.getDefesa() + equipamentos.getDefesa());
             System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());
-        } else if (equipamentos.getTipo() == TiposItens.CAJADO && this.getClasse()== ClasseDoPersonagem.MAGO){
+        } else if (equipamentos.getTipo() == TiposItens.CAJADO && this.getClasse()== ClasseDoPersonagem.MAGO) {
             this.setBonusDano(this.getBonusDano() + equipamentos.getDano());
-            System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());}
+            System.out.println("O SEU PERSONAGEM EQUIPOU O ITEM = " + equipamentos.getNomeEquipamento());
+        } else if(equipamentos.getTipo().equals(TiposItens.POCAO_VIDA)) {
+            this.setPontosVida(this.getPontosVida() + equipamentos.getCuraVida());
+            System.out.println("O personagem " + this.getNome() + " usou poção de cura.");
+            System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
+        } else if (equipamentos.getTipo().equals(TiposItens.POCAO_MANA)) {
+            this.setPontosMana(this.getPontosMana() + equipamentos.getRestauraMana());
+            System.out.println("O personagem " + this.getNome() + " usou poção de cura.");
+            System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
+        }
         else {
             System.out.println("Seu Personagem não pode Equipar este item.");
             return false;
@@ -93,16 +106,7 @@ public class Personagem implements AcoesPersonagens {
     }
 //USAR POÇÃO
     public void usarPocao(Equipamentos equipamentos){
-        if(equipamentos.getTipo().equals(TiposItens.POCAO_VIDA)) {
-            this.setPontosVida(this.getPontosVida() + equipamentos.getCuraVida());
-            System.out.println("O personagem " + this.getNome() + " usou poção de cura.");
-            System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
-        } else if (equipamentos.getTipo().equals(TiposItens.POCAO_MANA)) {
-            this.setPontosMana(this.getPontosMana() + equipamentos.getRestauraMana());
-            System.out.println("O personagem " + this.getNome() + " usou poção de cura.");
-            System.out.println("Seus pontos de vida atuais são: " + this.getPontosVida());
 
-        }
     }
 
 

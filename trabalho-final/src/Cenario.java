@@ -254,6 +254,10 @@ import java.util.Scanner;
                                 (getPersonagemJogador(indiceDoJogadr).getBonusDano() + testeEquipamento.getDano());
                         jogadorManipulacao.selecionarJogador(indiceDoJogadr).getPersonagemDoJogador().setBonusDefesa
                                 (getPersonagemJogador(indiceDoJogadr).getBonusDefesa() + testeEquipamento.getDefesa());
+                        jogadorManipulacao.selecionarJogador(indiceDoJogadr).getPersonagemDoJogador().setPontosVida
+                                (getPersonagemJogador(indiceDoJogadr).getPontosVida() + testeEquipamento.getCuraVida());
+                        jogadorManipulacao.selecionarJogador(indiceDoJogadr).getPersonagemDoJogador().setPontosMana
+                                (getPersonagemJogador(indiceDoJogadr).getPontosMana() + testeEquipamento.getRestauraMana());
                         listaEquipamentos.removerEquipamentos(indiceDoItem);
                     }
                 } while (selecao == 1);
