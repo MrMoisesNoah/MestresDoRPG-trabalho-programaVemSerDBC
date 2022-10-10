@@ -37,21 +37,20 @@ public class Personagem implements AcoesPersonagens {
 
             System.out.println("O Arqueiro " + personagem1.getNome() + " atira uma flecha certeira no " + personagem2.getNome());
             personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
-            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+            System.out.println("O seu inimigo : " + personagem2.getNome() + " está com = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
 
         } else if (this.classe.equals(ClasseDoPersonagem.GUERREIRO) && (resultadoDados >= defesa)) {
 
             System.out.println("O Guerreiro " + personagem1.getNome() + " acerta um golpe de Espada em " + personagem2.getNome());
             personagem2.setPontosVida(personagem2.getPontosVida() - resuldadoDano);
-            //System.out.println("O personagem " + personagem2.getNome() + " perdeu " + personagem2.getPontosVida() + "Pontos de Vida");
-            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+            System.out.println("O seu inimigo : " + personagem2.getNome() + " está com = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
 
         } else if (this.classe.equals(ClasseDoPersonagem.MAGO) && (ataqueMago >= defesa) && personagem2.getPontosVida() > 0) {
             System.out.println("O Mago " + personagem1.getNome() + " lança uma poderosa bola de fogo no " + personagem2.getNome());
             personagem2.setPontosVida(personagem2.getPontosVida() - danoMago);
             personagem1.setPontosMana(personagem1.getPontosMana() - 5);
-            System.out.println(personagem2.getNome() + " = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
-            System.out.println(personagem1.getNome() + " = " + personagem1.getPontosMana() + "PONTOS DE MANA");
+            System.out.println("O seu inimigo  " + personagem2.getNome() + " está com = " + personagem2.getPontosVida() + " PONTOS DE VIDA");
+            System.out.println("O seu poderoso MAGO gastou Pontos de Mana. "+personagem1.getNome() + " agora está com = " + personagem1.getPontosMana() + " PONTOS DE MANA");
         } else {
             System.out.println("Você errou seu Ataque!");
             return false;
@@ -210,8 +209,7 @@ public class Personagem implements AcoesPersonagens {
 
     @Override
     public String toString() {
-        return "Personagem{" +
-                "nome='" + nome + '\'' +
+        return "Personagem: " + nome + '\'' +
                 ", raca=" + raca +
                 ", classe=" + classe +
                 ", forca=" + forca +
@@ -222,7 +220,6 @@ public class Personagem implements AcoesPersonagens {
                 ", pontosMana=" + pontosMana +
                 ", bonusDano=" + bonusDano +
                 ", bonusDefesa=" + bonusDefesa +
-                ", tipoPersoangem=" + tipoPersoangem +
-                '}';
+                ", tipoPersoangem=" + tipoPersoangem;
     }
 }

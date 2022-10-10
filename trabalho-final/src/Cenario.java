@@ -87,9 +87,9 @@ import java.util.Scanner;
                 if (opcao != 3) {
                     System.out.print("Nome do personagem: ");
                     nome = menu.nextLine();
-                    System.out.print("Raca: ");
+                    System.out.print("Qual será sua raça: HOMEM, ORC ou ELFO?: ");
                     raca = menu.nextLine();
-                    System.out.print("Classe: ");
+                    System.out.print("Qual será sua Classe: ARQUEIRO, GUERREIRO ou MAGO? ");
                     classe = menu.nextLine();
                     System.out.print("Forca: ");
                     forca = menu.nextDouble();
@@ -220,10 +220,10 @@ import java.util.Scanner;
                 }
             }
             if(jogador.getPersonagemDoJogador().getPontosVida() <= 0) {
-                System.out.println("Venceu: " + monstro);
+                System.out.println("O vencedor desse combate foi o terrivel: " + monstro);
                 jogadorManipulacao.removerJogador(jogador);
             } else if (monstro.getPontosVida() <= 0) {
-                System.out.println("Venceu: " + jogador);
+                System.out.println("Parabéns jogadores, o vencedor do combate foi o herói: " + jogador);
                 personagemManipulacao.removerPersonagem(monstro);
             }
         }
@@ -269,12 +269,12 @@ import java.util.Scanner;
         public void iniciarHistoria() {
 
             String sairCenario;
-            System.out.print("Cena " + cena + "  ---- Termine sua historia com  ! " + " \n \n");
+            System.out.print("Cena " + cena + "  ---- Mestre, conte aos jogadores a sua história! Após escrever, basta pressionar: '#' para continuar o jogo  " + " \n \n");
             ++cena;
             do {
                 sairCenario = menu.nextLine();
 
-            } while (!sairCenario.contains("!"));
+            } while (!sairCenario.contains("#"));
         }
 
     }

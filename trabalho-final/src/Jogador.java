@@ -43,10 +43,8 @@ public class Jogador extends JogadorManipulacao {
 
     @Override
     public String toString() {
-        return "Jogador{" +
-                "nomeJogador='" + nomeJogador + '\'' +
-                ", idade=" + idade +
-                ", personagemDoJogador=" + personagemDoJogador +
+        return personagemDoJogador +
+                " * Nome do Jogador => " + nomeJogador + '\'' +
                 '}';
     }
 

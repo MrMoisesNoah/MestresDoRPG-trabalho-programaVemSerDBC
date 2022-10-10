@@ -35,7 +35,7 @@ public class PersonagemManipulacao {
 
     public void listarPersonagem() {
         for (int i = 0; i < listaDePersonagens.size(); i++) {
-            System.out.println("id=" + i + " | " + listaDePersonagens.get(i));
+            System.out.println("id do Personagem = " + i + " | " + listaDePersonagens.get(i));
         }
     }
 
