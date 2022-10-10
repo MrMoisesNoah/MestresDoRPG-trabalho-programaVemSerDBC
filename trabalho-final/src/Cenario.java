@@ -91,6 +91,7 @@ import java.util.Scanner;
                     raca = menu.nextLine();
                     System.out.print("Qual será sua Classe: ARQUEIRO, GUERREIRO ou MAGO? ");
                     classe = menu.nextLine();
+                    System.out.println("Agora preencha os atributos com seus respectivos valores NUMERICOS: ");
                     System.out.print("Forca: ");
                     forca = menu.nextDouble();
                     System.out.print("Defesa: ");
