@@ -15,8 +15,10 @@ public class JogadorManipulacao  {
         this.listaJogadores.add(jogador);
     }
 
-    public void removerJogador (Integer index){
-        this.listaJogadores.get(index.intValue());
+
+
+    public void removerJogador (Jogador jogador) {
+        this.listaJogadores.remove(jogador);
     }
     public void editarJogador(Jogador jogador, Integer index){
         Jogador procuraJogador = listaJogadores.get(index);
@@ -31,14 +33,11 @@ public class JogadorManipulacao  {
         }
     }
 
-    public List<Jogador> selecionarJogadorPorNome(String nome){
-        this.listaJogadores.stream()
-                .filter(jogador -> jogador.getPersonagemDoJogador().getNome().toLowerCase().contains(nome));
-        return null;
-    }
 
-    public Jogador getJogador(int index){
+    public Jogador selecionarJogador(int index){
         return listaJogadores.get(index);
     }
+
+
 
 }

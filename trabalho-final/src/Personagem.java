@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Personagem extends PersonagemManipulacao implements AcoesPersonagens{
+public class Personagem implements AcoesPersonagens{
 
     //INFORMAÇÕES
 
@@ -8,8 +8,6 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
     private RacaDoPersonagem raca;
     private ClasseDoPersonagem classe;
 
-    //EQUIPAMENTOS
-    private List<Equipamentos> equipamentos;
 
     //ATRIBUTOS
 
@@ -119,7 +117,6 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
         this.nome = nome;
         this.raca = raca;
         this.classe = classe;
-//        this.equipamentos = equipamentos;
         this.forca = forca;
         this.defesa = defesa;
         this.constituicao = constituicao;
@@ -174,10 +171,6 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
 
     public void setPontosMana(double pontosMana) {this.pontosMana = pontosMana;}
 
-    public List<Equipamentos> getEquipamentos() {return equipamentos;}
-
-    public void setEquipamentos(List<Equipamentos> equipamentos) {this.equipamentos = equipamentos;}
-
     public double getForca() {
         return forca;
     }
@@ -219,7 +212,6 @@ public class Personagem extends PersonagemManipulacao implements AcoesPersonagen
                 "nome='" + nome + '\'' +
                 ", raca=" + raca +
                 ", classe=" + classe +
-                ", equipamentos=" + equipamentos +
                 ", forca=" + forca +
                 ", defesa=" + defesa +
                 ", constituicao=" + constituicao +

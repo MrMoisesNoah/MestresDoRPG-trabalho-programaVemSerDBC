@@ -1,4 +1,4 @@
-public class Equipamentos extends EquipamentosManipulacao{
+public class Equipamentos {
     private String nomeEquipamento;
     private TiposItens tipo;
     private double dano;
